@@ -1,15 +1,21 @@
-##Computer prints out without spacing unless specified. Shows that computer follows only what they interpret we wrote.
+## Computer prints out without spacing unless specified. Shows that computer follows only what they interpret we wrote.
 
-##Printing using user input:
+![Python Strings](https://github.com/david-chua/Comp_Sci_Study/blob/master/Introduction%20to%20Computer%20Science%20and%20Programming%20in%20Python/Images/PythonStrings.png "Python String")
 
-##Comparing string and number is not possible - Python throws error:
+## Printing using user input:
 
-##Conditionals (Code Flow):
-##Code block is kept track via indentation (typically 4 spaces):
+![Python Input](https://github.com/david-chua/Comp_Sci_Study/blob/master/Introduction%20to%20Computer%20Science%20and%20Programming%20in%20Python/Images/StringInput.png "Input Example")
 
-##if/else conditions:
-##if condition is true, execute a set of statements
-##if the condition is not true, do not execute, and find what condition fits or use the else to commit a direction.
+## Comparing string and number is not possible - Python throws error:
+
+![Python String Number Comparison](https://github.com/david-chua/Comp_Sci_Study/blob/master/Introduction%20to%20Computer%20Science%20and%20Programming%20in%20Python/Images/StringNumComparison.png "String Number Comparison")
+
+## Conditionals (Code Flow):
+## Code block is kept track via indentation (typically 4 spaces):
+
+## if/else conditions:
+## if condition is true, execute a set of statements
+## if the condition is not true, do not execute, and find what condition fits or use the else to commit a direction.
 
 ## Strings
 ## Strings are "immutable" - cannot be modified
@@ -21,7 +27,7 @@ s = 'y' + s[1:len(s)] ==> returns "yello'
 ```
 
 
-s = "abcdefgh"
+```s = "abcdefgh"
 
 for index in range(len(s)):
   if s[index] == i or s[index] == u:
@@ -31,9 +37,10 @@ for index in range(len(s)):
 for char in s:
   if char == 'i' or char == 'u':
     print("There is an i or u")
+```    
 
 
-an_letters = "aefhilmnorsxAEFHILMNORSX"
+```an_letters = "aefhilmnorsxAEFHILMNORSX"
 word = input("I will cheer for you! Enter a word: ")
 times = int(input("Enthusiasm level ( 1- 10): "))
 i = 0
@@ -47,9 +54,11 @@ while i < len(word):
 print("What does that spell?")
 for i in range(times):
   print(word, "!!!")
+```
 
 Other way to write this:
 
+```
 word = input("I will cheer for you! Enter a word: ")
 times = int(input("Enthusiasm level ( 1- 10): "))
 for char in word:
@@ -60,3 +69,4 @@ for char in word:
   print("What does that spell?")
 for i in range(times):
   print(word, "!!!")
+```
