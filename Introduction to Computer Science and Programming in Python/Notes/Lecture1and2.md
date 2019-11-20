@@ -13,13 +13,13 @@
 ## Conditionals (Code Flow):
 ## Code block is kept track via indentation (typically 4 spaces):
 
-## if/else conditions:
-## if condition is true, execute a set of statements
-## if the condition is not true, do not execute, and find what condition fits or use the else to commit a direction.
+if/else conditions:
+if condition is true, execute a set of statements
+if the condition is not true, do not execute, and find what condition fits or use the else to commit a direction.
 
-## Strings
-## Strings are "immutable" - cannot be modified
-## Example:
+Strings
+Strings are "immutable" - cannot be modified
+Example:
 
 ```s = "hello"
 s[0= 'y'  --> No possible
