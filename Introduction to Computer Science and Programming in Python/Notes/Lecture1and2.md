@@ -1,23 +1,24 @@
-Computer prints out without spacing unless specified. Shows that computer follows only what they interpret we wrote.
+##Computer prints out without spacing unless specified. Shows that computer follows only what they interpret we wrote.
 
-Printing using user input:
+##Printing using user input:
 
-Comparing string and number is not possible - Python throws error:
+##Comparing string and number is not possible - Python throws error:
 
-Conditionals (Code Flow):
-Code block is kept track via indentation (typically 4 spaces):
+##Conditionals (Code Flow):
+##Code block is kept track via indentation (typically 4 spaces):
 
-if/else conditions:
-if condition is true, execute a set of statements
-if the condition is not true, do not execute, and find what condition fits or use the else to commit a direction.
+##if/else conditions:
+##if condition is true, execute a set of statements
+##if the condition is not true, do not execute, and find what condition fits or use the else to commit a direction.
 
-Strings
-Strings are "immutable" - cannot be modified
-Example:
+## Strings
+## Strings are "immutable" - cannot be modified
+## Example:
 
-s = "hello"
+```s = "hello"
 s[0= 'y'  --> No possible
 s = 'y' + s[1:len(s)] ==> returns "yello'
+```
 
 
 s = "abcdefgh"
