@@ -28,3 +28,17 @@ Lazy excuse to not promote learning.
 Do not be clever if it's not communicative.
 
 Make sure that code can be translated in another situation if needed. Not something that you learn once and never use again.
+
+## Implicit coercion
+
+Think of implicit as abstracted.
+
+Hide unnecessary details and re-focus readers on important stuff.
+Some of the implicit nature of JS are sketch but some of it is quite useful as the detail of hiding things like boxing, allows you to use it quickly and more useful.
+
+Implicit can be good.
+
+Less than operator coerces things into a number.
+In less than, if one of the value is a number, it is implicit to turn the other number into a number.
+
+Is showing the reader extra details helpful or distracting? It depends.
