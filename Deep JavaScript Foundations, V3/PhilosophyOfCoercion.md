@@ -42,3 +42,16 @@ Less than operator coerces things into a number.
 In less than, if one of the value is a number, it is implicit to turn the other number into a number.
 
 Is showing the reader extra details helpful or distracting? It depends.
+
+## Understanding Features
+- If a feature is sometimes useful and sometimes dangerous and if there is a better option then always use the better operation
+
+What is useful?
+How do we define better option?
+Statement is not useful in its abstract sense.
+
+Useful: when the reader is focused on what's important
+Dangerous: when reader can't tell what will happen.
+Better: when the reader understands the code.
+
+It is irresponsible to knowingly avoid usage of a feature that can improve code readability
