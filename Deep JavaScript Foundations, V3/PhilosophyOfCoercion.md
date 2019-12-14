@@ -55,3 +55,65 @@ Dangerous: when reader can't tell what will happen.
 Better: when the reader understands the code.
 
 It is irresponsible to knowingly avoid usage of a feature that can improve code readability
+
+
+## Coercion Exercises:
+
+Validation function  that checks user input.
+Define two validator Function
+1) isValidName(), takes one parameter and return true if all the following match:
+* must be a string
+* must be non-empty
+* must contain non-whitespace of at least 3 characters.
+2) hoursAttended() contains two parameters, attended and length.
+* either parameter may only be a string or number.
+* both parameters should be treated as numbers
+* both numbers must be 0 or higher
+* both numbers must be whole numbers
+* 'attended' must be less than or equal to length
+
+## Coercion solution
+
+isValidName function
+````
+function isValidName(name){
+  if (
+    typeof name == "string"
+    name.trim().length >= 3
+  ){
+    return true;
+  }
+  return false
+}
+````
+
+hoursAttended Function
+````
+function hoursAttended(attended, length){
+  if (
+    typeof attended == "string" &&
+    attended.trim() != ""
+    ){
+    attended = Number(attended);
+  }
+  if (
+    typeof length == "string" &&
+    length.trim() != ""
+    ){
+      length = Number(length);
+  }
+  if (
+    typeof attended == "number" &&
+    typeof length == "number"
+    attended >= 0 &&
+    length >= 0 &&
+    Number.isInteger(attended) &&
+    Number.isInteger(length) &&
+    attended <= length
+    ){
+      return true
+  }
+  return false;
+}
+
+````
