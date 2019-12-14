@@ -18,58 +18,58 @@ Same scenario different order.
 
 This abstract operation takes any value and gives the representation in string form.
 
-null --> "null"
-undefined --> "undefined"
-true --> "true"
-false --> "false"
-3.14159 --> "3.14159"
-0 --> "0"
--0 --> "0" // OOPS --> Incorrect
+* null --> "null"
+* undefined --> "undefined"
+* true --> "true"
+* false --> "false"
+* 3.14159 --> "3.14159"
+* 0 --> "0"
+* -0 --> "0" // OOPS --> Incorrect
 
 ToString(object): ToPrimitive(string)
 aka: toString() / valueOf()
 
-[] --> ""
-[1,2,3] --> "1,2,3"
-[null, undefined] --> ","
-[[[],[],[]],[]] --> ",,,"
-[....] --> "...."
+* [] --> ""
+* [1,2,3] --> "1,2,3"
+* [null, undefined] --> ","
+* [[[],[],[]],[]] --> ",,,"
+* [....] --> "...."
 
 Array to stringification will never be used due to corner cases.
 
 
-{} --> "[object Object]"
-{a:2} --> "[object Object]"
-{toString(){return"X";}} --> "X"
+* {} --> "[object Object]"
+* {a:2} --> "[object Object]"
+* {toString(){return"X";}} --> "X"
 
 
 ## toNumber()
 
-""          --> 0
-"0"         --> 0
-"-0"        --> -0
-" 009 "     --> 9
-"3.14159"   --> 3.14159
-"0."        --> 0
-".0"        --> 0
-"."         --> NaN
-"0xaf"      --> 175
-false       --> 1
-true        --> 1
-false       --> 0
-undefined   --> NaN
-null        --> 0
+* ""          --> 0
+* "0"         --> 0
+* "-0"        --> -0
+* " 009 "     --> 9
+* "3.14159"   --> 3.14159
+* "0."        --> 0
+* ".0"        --> 0
+* "."         --> NaN
+* "0xaf"      --> 175
+* false       --> 1
+* true        --> 1
+* false       --> 0
+* undefined   --> NaN
+* null        --> 0
 
-['''']      --> 0
-["0"]       --> 0
-["-0"]      --> -0
-[null]      --> 0
-[undefined] --> 0
-[1,2,3]     --> NaN
-[[[[[]]]]]  --> 0
+* ['''']      --> 0
+* ["0"]       --> 0
+* ["-0"]      --> -0
+* [null]      --> 0
+* [undefined] --> 0
+* [1,2,3]     --> NaN
+* [[[[[]]]]]  --> 0
 
-{ ..}       --> NaN
-{ valueOf() { return 3;}} --> 3
+* { ..}       --> NaN
+* { valueOf() { return 3;}} --> 3
 
 
 ## toBoolean
@@ -176,49 +176,48 @@ Boxing - a form of implicit coercion. You have something that's not an object bu
 
 All languages has type conversion corner cases.
 
-Number( "" );                   // 0    OOPS!
-Number( "    \t\n" );           // 0    OOPS!
-Number(  null );                // 0    OOPS!
-Number( undefined );            // NaN
-Number( [] );                   // 0    OOPS!
-Number( [1,2,3] );              // NaN
-Number( [null] );               // 0    OOPS!
-Number( [undefined] );          // 0    OOPS!
-Number( {} );                   // NaN
+* Number( "" );                   // 0    OOPS!
+* Number( "    \t\n" );           // 0    OOPS!
+* Number(  null );                // 0    OOPS!
+* Number( undefined );            // NaN
+* Number( [] );                   // 0    OOPS!
+* Number( [1,2,3] );              // NaN
+* Number( [null] );               // 0    OOPS!
+* Number( [undefined] );          // 0    OOPS!
+* Number( {} );                   // NaN
 
-String( -0 );                   // "0"  OOPS!
-String( null );                 // "null"
-String( undefined );            // "undefined"  
-String( [null] );               // ""   OOPS!
-String( [undefined] );          // ""   OOPS!
+* String( -0 );                   // "0"  OOPS!
+* String( null );                 // "null"
+* String( undefined );            // "undefined"  
+* String( [null] );               // ""   OOPS!
+* String( [undefined] );          // ""   OOPS!
 
-Boolean( new Boolean(false) );  // true OOPS!
+* Boolean( new Boolean(false) );  // true OOPS!
 
+* studentsInput.value = "";       // ..
 
-studentsInput.value = "";       // ..
+* Number(studentsInput.value);    // 0
 
-Number(studentsInput.value);    // 0
-
-studentsInput.value = " \t\n";  // ..
+* studentsInput.value = " \t\n";  // ..
 
 There are corner cases that are not as obvious due to not dealing with typical operations.
 
-Number(true);       // 1
-Number(false);      // 0
+* Number(true);       // 1
+* Number(false);      // 0
 
-1 < 2;              // true
-2 < 3;              // true
-1 < 2 < 3;          // true (but...)
-(1< 2)<3;
-(true) < 3;
-1 < 3;              // true (hmm..)
+* 1 < 2;              // true
+* 2 < 3;              // true
+* 1 < 2 < 3;          // true (but...)
+* (1< 2)<3;
+* (true) < 3;
+* 1 < 3;              // true (hmm..)
 
 //****
 
-3 > 2;            // true
-2 > 1;            // true
-3 > 2 > 1;        // false  OOPS!
+* 3 > 2;            // true
+* 2 > 1;            // true
+* 3 > 2 > 1;        // false  OOPS!
 
-(3 > 2) > 1;
-(true) > 1;
-1 > 1           // false
+* (3 > 2) > 1;
+* (true) > 1;
+* 1 > 1           // false
