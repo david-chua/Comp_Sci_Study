@@ -186,3 +186,5 @@ Using === would be unnecessary so prefer the shorter ==.
 * Not knowing the types is equivalent to assuming type conversion/ coercion will occur
 
 * If you can't or won't use known obvious types. === is the only reasonable choice.
+
+* Even if === would always be equivalent to == in your code, using it everywhere sends a wrong semantic signal: "Protecting myself since I don't know/trust the types"
