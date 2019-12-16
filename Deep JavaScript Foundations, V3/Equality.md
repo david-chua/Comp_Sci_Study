@@ -77,7 +77,7 @@ if (workshopEnrollment1 == workshopEnrollment2){
 
 
 
-Coercive equality
+## Coercive equality
 
 ````
 var workshop1Count = 42;
@@ -92,3 +92,62 @@ if (workshop1Count == workshop2Count){
 }
 
 ````
+
+
+## Double Equals Corner cases
+
+* [] == ![];      // true WHAT?
+
+
+````
+var workshop1Students = [];
+var workshop2Students = [];
+
+//if (workshop1Students == !workshop2Students){
+// if ([] == false) {}
+// if ("" == false){}
+// if (0 == false){}
+// if (0 === 0){}
+if (true) {
+  // true
+}
+
+if (workshop1Students != workshop2Students){
+if (workshop1Students == workshop2Students){}
+if (!(false)){}
+if (true){
+ // true
+}
+
+````
+
+## Boolean Corner cases
+
+
+````
+
+var workshopStudents = [];
+
+if (workshopStudents){
+  // yep
+}
+
+if (workshopStudents == true){
+// if ("" == true){}  --> becomes primitive
+// if (0 == 1){}   --> false
+// if (false){
+  // Nope :C
+}
+
+if (workshopStudents == false){
+if ("" == false){}
+if (0 === 0){}  
+  // Yep :C
+}
+
+
+// Boolean Corner Cases Summary
+
+1) Avoid == if one is 0 or "" or even (" ")
+2) Avoid == with non-primitives
+3) Avoid == true or == false: allow ToBoolean or use ===
