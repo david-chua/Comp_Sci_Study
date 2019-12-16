@@ -188,3 +188,52 @@ Using === would be unnecessary so prefer the shorter ==.
 * If you can't or won't use known obvious types. === is the only reasonable choice.
 
 * Even if === would always be equivalent to == in your code, using it everywhere sends a wrong semantic signal: "Protecting myself since I don't know/trust the types"
+
+
+## Wrangling equality
+1) findAll(..) function that searches an array and returns an array with all coercive matches.
+
+2) coercive matching that is allowed:
+* exact matches(`Object.is(..)`)
+* strings ( except "" or whitespace-only) can match numbers
+* numbers (except `NaN` and `+/- Infinity`) can match strings( watch out for `-0`)
+* `null` can match `undefined`, and vice versa
+* booleans can only match booleans
+* objects can only match the same exact object.
+
+````
+function findAll(match, arr){
+  var ret = [];
+  for (let v of arr){
+    if (Object.is(match,v)){
+      ret.push(v)
+    }
+    else if (match == null && v == null){
+      ret.push(v)
+    }
+    else if (typeof match == "boolean" && type of v == "boolean"){
+      if (match == v){
+        ret.push(v)
+      }
+    }
+    else if (typeof match == "string" && match.trim() !== "" && type of v == "number" && !Object.is(v, -0)){
+      if(match == v){
+        ret.push(v);
+      }
+    }
+    else if (
+      typeof match == "number" &&
+      !Object.is(match, -0)  
+      !Object.is(match, NaN) &&
+      !Object.is(match, Infinity) &&
+      !Object.is(match, -Infinity) &&
+      typeof v == "string" &&
+      v.trim() != ""
+    ){
+      if (match == v){
+        ret.push(v)
+      }
+    }
+  }
+  return ret;
+}
