@@ -54,4 +54,41 @@ if (workshop === workshop2){
 
 ````
 
-This is because workshop and workshop2 are two different objects. 
+This is because workshop and workshop2 are two different objects.
+
+## Coercive Equality
+
+````
+== prefers Number comparison.
+
+var workshopEnrollment1 = 16;
+var workshopEnrollment2 = workshop2Elem.value;
+
+if (Number(workshopEnrollment1) === Number(workshopEnrollment2)){
+  //..
+}
+
+
+if (workshopEnrollment1 == workshopEnrollment2){
+  // ..
+}
+
+````
+
+
+
+Coercive equality
+
+````
+var workshop1Count = 42;
+var workshop2Count = [42];
+
+if (workshop1Count == workshop2Count){
+  // if (42 == "42"){
+  // if (42 == 42){
+  if (true){
+    // Yep (hmm...)
+  }
+}
+
+````
