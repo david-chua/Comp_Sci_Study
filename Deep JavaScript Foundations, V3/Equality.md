@@ -151,3 +151,38 @@ if (0 === 0){}
 1) Avoid == if one is 0 or "" or even (" ")
 2) Avoid == with non-primitives
 3) Avoid == true or == false: allow ToBoolean or use ===
+````
+
+
+The case for preferring ==
+
+* Knowing types is always better than not knowing them.
+* Static Types is not the only (or even necessarily the best) way to know your types
+* == is not about comparisons with unknown types.
+* == is about comparisons with known type(s), optionally where conversions are helpful.
+
+### If you know the type(s) in a comparison.
+
+* If both types are the same. == is identical to ===
+Using === would be unnecessary so prefer the shorter ==.
+
+* If the types are different, using one === would be broken.
+
+* Prefer the more powerful == or don't compare at all.
+
+* If the types are different, the equivalent of one == would be two (or more!) === (ie. "slower");
+
+* Prefer the "faster" single ==
+
+* If the types are different, two (or more!) === comparisons may distract the reader.
+
+
+### If you don't know the types:
+
+* Not knowing the types means not fully understanding the code. (best to refactor to know the types)
+
+* The uncertainty of not knowing types should be obvious to the reader.
+
+* Not knowing the types is equivalent to assuming type conversion/ coercion will occur
+
+* If you can't or won't use known obvious types. === is the only reasonable choice.
