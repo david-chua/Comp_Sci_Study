@@ -16,3 +16,38 @@ Caveats
 * Any part of the application taht isn't type introduces uncertainty.
 
 ## Inferencing
+
+````
+var teacher = "Kyle";
+
+//..
+
+teacher = { name: "Kyle" }
+// Error: can't assign objects
+// to string
+````
+
+Static type, infering the type base on variable assigned to it.
+
+````
+var teacher: string = "Kyle";
+
+````
+
+
+## Custom Types
+
+````
+type student = { name: string };
+
+function getName(studentRec: student): string{
+  return studentRec.name;
+}
+
+var firstStudent: student = {name : "Frank"};
+var firstStudentName: string = getName(firstStudent);
+````
+
+A parameter to a function is like a variable.
+
+å
