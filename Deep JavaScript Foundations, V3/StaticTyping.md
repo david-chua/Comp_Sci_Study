@@ -50,4 +50,24 @@ var firstStudentName: string = getName(firstStudent);
 
 A parameter to a function is like a variable.
 
-å
+## Validating Operand Types
+
+var studentName: string = "Frank";
+var studentCount: number - 16 - studentName;
+// error: can't subtract string
+
+* In typescript, you opt into it fully or not.
+
+https://github.com/liieani/typescript-vs-flowtype
+
+## Static Typing Pros
+* They make types more obvious in code.
+* Familiarity: they look like other language's type systems
+* Extremely popular these days.
+
+
+## Static Typing Cons
+* They use "non-JS-standard" syntax (or code comments)
+* They require* a build process, which raises the barrier to entry
+* Their sophistication can be intimidating to those without prior formal types experience
+* They focus more on "static types" (variables, parameters, returns, properties, etc) than value types. 
