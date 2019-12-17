@@ -70,4 +70,12 @@ https://github.com/liieani/typescript-vs-flowtype
 * They use "non-JS-standard" syntax (or code comments)
 * They require* a build process, which raises the barrier to entry
 * Their sophistication can be intimidating to those without prior formal types experience
-* They focus more on "static types" (variables, parameters, returns, properties, etc) than value types. 
+* They focus more on "static types" (variables, parameters, returns, properties, etc) than value types.
+
+
+# Final Observation: 
+Javascript has a (dynamic) type system, which uses various forms of coercion for value type conversion, including equality comparisons.
+
+Part of the problem with avoidance of whole swaths of JS, like pretending === saves you from needing to know types.
+
+You cannot write quality JS programs without knowing the types involved in your operations.
