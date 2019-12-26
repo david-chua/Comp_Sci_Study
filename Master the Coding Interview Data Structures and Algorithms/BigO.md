@@ -16,4 +16,9 @@ function findNemo(array){
 findNemo(nemo);
 ````
 
-The runtime - how long does it take to run the code. How do we measure the efficiency of the code. 
+The runtime - how long does it take to run the code. How do we measure the efficiency of the code.
+We see that adding more input, increases time to run a certain code.
+
+Runtime depends on CPU's power, what types of programs are running at the time, and other factors.
+
+In function findNemo, the run time complexity is O(n), which is linear time. n means that the run time depends on how big the number of inputs is.
