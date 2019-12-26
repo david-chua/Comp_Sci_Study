@@ -22,3 +22,17 @@ We see that adding more input, increases time to run a certain code.
 Runtime depends on CPU's power, what types of programs are running at the time, and other factors.
 
 In function findNemo, the run time complexity is O(n), which is linear time. n means that the run time depends on how big the number of inputs is.
+
+Other linear functions:
+
+````
+
+function compressAllBoxes(boxes){
+  boxes.forEach(function(item){
+    console.log(item);
+    });
+};
+
+const compressAllBoxes = boxes => {
+  boxes.forEach(box => console.log(box));
+};
