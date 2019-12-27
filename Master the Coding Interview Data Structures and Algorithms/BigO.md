@@ -67,8 +67,9 @@ nested loops
 * for nested steps
 * Rule 4: Drop Non-dominant terms
 
-## What causes Space complexity?-
-Variables
-Data Structures
-Function Call
-Allocations
+## What causes Space complexity?
+
+* Variables
+* Data Structures
+* Function Call
+* Allocations
