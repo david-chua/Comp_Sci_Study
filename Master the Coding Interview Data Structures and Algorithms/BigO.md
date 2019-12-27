@@ -134,4 +134,111 @@ function anotherFunChallenge(input) {
 anotherFunChallenge(input)  // O(4 + 5n) => O(n)
 ````
 
-Simplifying Big O -
+## Big O rule 1 - worst case
+
+````
+const nemo = ['nemo'];
+
+function findNemo1(array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === 'nemo') {
+      console.log('Found NEMO!');
+      break;
+    }
+  }
+}
+
+findNemo1(nemo);
+````
+
+Big O cares about the worst case scenario. In the grand scheme of things, because we can't be certain of the input, we'll assume worst case scenario.
+
+## Big O rule 2 - Remove Constants
+
+````
+function printFirstItemThenFirstHalfThenSayHi100Times(items) {
+    console.log(items[0]);
+
+    var middleIndex = Math.floor(items.length / 2);
+    var index = 0;
+
+    while (index < middleIndex) {
+        console.log(items[index]);
+        index++;
+    }
+
+    for (var i = 0; i < 100; i++) {
+        console.log('hi');
+    }
+}
+
+Big O: O(1 + n/2 + 100) ==> O(n)
+
+
+function compressBoxesTwice(boxes){
+
+  boxes.forEach(function(boxes){
+    console.log(boxes);
+  });
+
+  boxes.forEach(function(boxes){
+    console.log(boxes);
+  })
+}
+
+Big O: O(n)
+````
+
+## Rule 3 - Different terms for inputs
+
+````
+function compressBoxesTwice(boxes, boxes2){
+
+  boxes.forEach(function(boxes){
+    console.log(boxes);
+  });
+
+  boxes2.forEach(function(boxes){
+    console.log(boxes);
+  })
+}
+
+In this case, since there's two different input, the big O will be something like O(a + b)
+````
+
+## O(n^2):
+
+````
+const boxes = ['a', 'b', 'c', 'd', 'e'];
+function logAllPairsOfArray(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      console.log(array[i], array[j])
+    }
+  }
+}
+
+logAllPairsOfArray(boxes)
+````
+
+## Rule 4 - Drop Non Dominant Terms:
+
+````
+function printAllNumbersThenAllPairSums(numbers) {
+
+  console.log('these are the numbers:');
+  numbers.forEach(function(number) {
+    console.log(number);
+  });
+
+  console.log('and these are their sums:');
+  numbers.forEach(function(firstNumber) {
+    numbers.forEach(function(secondNumber) {
+      console.log(firstNumber + secondNumber);
+    });
+  });
+}
+
+printAllNumbersThenAllPairSums([1,2,3,4,5])
+````
+O(n + n^2) ==> O(n^2)
