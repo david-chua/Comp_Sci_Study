@@ -73,3 +73,65 @@ nested loops
 * Data Structures
 * Function Call
 * Allocations
+
+
+## O(1)
+
+````
+function compressFirstBox(boxes){
+  console.log(boxes[0]);
+};
+
+````
+This type of function is in constant time. This means that no matter how big the input it, it's grabbing the specific item in the array.
+
+````
+function logFirstTwoBoxes(boxes){
+  console.log(boxes[0]);      // O(1)
+  console.log(boxes[1]);      // O(1)
+}
+
+logFirstTwoBoxes(boxes)      // O(2)
+````
+When it comes to constant time, we round it to simply O(1) -- constant time. In terms of scalability, there is a constant amount of time in a function.
+
+````
+function funChallenge(input) {
+  let a = 10;             // O(1)
+  a = 50 + 3;             // O(1)
+
+  for (let i = 0; i < input.length; i++) {    // O(n)
+    anotherFunction();                  // O(n) as it is triggered the same amount of times as the input length
+   let stranger = true;                 // O(n) as it is triggered the same amount of times as the input length
+    a++;                                // O(n) as it is triggered the same amount of times as the input length
+  }
+  return a;       // O(1)
+}
+
+funChallenge() // O(3 + 4n) => O(n)
+````
+
+Exercise 2:
+
+````
+function anotherFunChallenge(input) {
+  let a = 5;
+  let b = 10;
+  let c = 50;
+  for (let i = 0; i < input; i++) {
+    let x = i + 1;
+    let y = i + 2;
+    let z = i + 3;
+
+  }
+  for (let j = 0; j < input; j++) {
+    let p = j * 2;
+    let q = j * 2;
+  }
+  let whoAmI = "I don't know";
+}
+
+anotherFunChallenge(input)  // O(4 + 5n) => O(n)
+````
+
+Simplifying Big O -

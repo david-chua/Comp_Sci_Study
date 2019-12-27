@@ -12,3 +12,9 @@ function findNemo(array){
 }
 
 findNemo(nemo);
+
+// O(1) - Constant Time Example:
+
+function compressFirstBox(boxes){
+  console.log(boxes[0]);
+};
