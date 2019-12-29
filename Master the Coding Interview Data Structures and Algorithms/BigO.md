@@ -260,3 +260,73 @@ Computers run based on speed which is usually dictated by the computer.
 * Speed - Time complexity
 
 There's usually a trade of between Space and Memory.
+
+## Space Complexity
+
+````
+
+function boooo(n){
+  for (let i = 0; i < n.length; i++){
+    console.log('booo');
+  };
+};
+
+book([1,2,3,4,5]) // O(1)
+
+
+function arrayOfHiNTimes(n){
+  let hiArray = [];
+  for (let i = 0; i < n.length; i++){
+    hiArray[i] = 'hi';
+  }
+  return hiArray;
+};
+
+arrayOfHiNTimes(6); O(n)
+
+````
+
+
+Exercise:
+
+// Find 1st, Find Nth...
+
+const array = ["hi", "my", "teddy"];
+
+array[0];     // O(1)
+array[array.length -1];     // O(1)
+
+//
+
+const array = [{
+  tweet: 'hi',
+  date: 2012,
+  },{
+  tweet: 'my',
+  date: 2014
+  },{
+  tweet: 'teddy',
+  date: 2018
+  }];
+
+"dadabadasbsfgtktgk".length // .length can vary depending on the langauge, but in JavaScript, .length is a simple lookup //O(1).
+
+Optional JavaScript loops
+
+````
+
+const findNemo2 = array => {
+  array.forEach(fish => {
+    if (fish === 'nemo'){
+      console.log('Found NEMO!');
+    }
+  })
+}
+
+const findNemo3 = array => {
+  for (let fish of array){
+    if (fish === 'nemo'){
+      console.log('Found NEMO!');
+    };
+  };
+};
