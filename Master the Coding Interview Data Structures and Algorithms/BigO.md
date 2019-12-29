@@ -242,3 +242,21 @@ function printAllNumbersThenAllPairSums(numbers) {
 printAllNumbersThenAllPairSums([1,2,3,4,5])
 ````
 O(n + n^2) ==> O(n^2)
+
+## O(n!)
+Big O notation that you normally don't encounter and if writing a code that evaluates in this manner, there's something wrong with the code as this is the steepest and most expensive code.
+
+## 3 Pillars of Programming
+
+What is good code?
+* Readable
+* Scalable - Speed and Memory.
+
+Computers run based on speed which is usually dictated by the computer.
+
+3 Pillars:
+* Readable
+* Memory - Space complexity
+* Speed - Time complexity
+
+There's usually a trade of between Space and Memory.
