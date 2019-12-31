@@ -46,3 +46,19 @@ var containsDuplicate = function(nums) {
 };
 
 ````
+
+Rotating an Array:
+
+````
+var rotate = function(nums, k) {
+    let rotationCount = 0
+    while (rotationCount < k){
+        temp = nums[nums.length-1]
+        for (let i = nums.length-1; i > 0; i--){
+            nums[i] = nums[i-1]
+        }
+        nums[0] = temp
+        rotationCount++
+    }
+};
+````
