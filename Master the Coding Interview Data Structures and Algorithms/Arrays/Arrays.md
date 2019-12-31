@@ -33,3 +33,16 @@ if strings is a 4 item array,
 adding a 5th item,
 JavaScript moves this into a new memory copying it and creating a bigger array
 like adding 'e' = ['a', 'b', 'c', 'd','e'];
+
+
+Find Duplicates:
+
+````
+var containsDuplicate = function(nums) {
+    if (nums.length === new Set(nums).size){
+        return false
+    }
+    return true
+};
+
+````
