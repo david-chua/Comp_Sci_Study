@@ -62,3 +62,13 @@ var rotate = function(nums, k) {
     }
 };
 ````
+
+Arrays Pros:
+- Fast lookups
+- Fast push/pop
+- Ordered
+
+Array Cons:
+- Slow inserts
+- Slow deletes
+- Fixed Size (if using static array)
