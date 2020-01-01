@@ -54,4 +54,19 @@ If adding hash tables where collisions occur. Items further in the same location
 In JS,
 There are Maps which allows to store any keys (string, number, functions). Maps also have a maintained ordered
 There are also Sets which only stores keys and no values.
- 
+
+
+## Hash Tables vs Arrays:
+
+Arrays:
+* Search: O(n)
+* Lookup: O(1)
+* Push*: O(1)/O(n)
+* Insert: O(n)
+* Delete: O(n)
+
+Hash Tables
+* Search: O(1)
+* Insert: O(1)
+* Lookup: O(1)
+* Delete: O(1)
