@@ -70,3 +70,14 @@ Hash Tables
 * Insert: O(1)
 * Lookup: O(1)
 * Delete: O(1)
+
+## Pros and Cons of Hash Tables:
+
+### Pros:
+Fast lookups - Good collision resolution is needed.
+Fast inserts
+Flexible keys
+
+### Cons:
+Unordered
+Slow key iteration --> Have to go through entire object
