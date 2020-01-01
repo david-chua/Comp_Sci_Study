@@ -39,3 +39,14 @@ JavaScript has no linked list. Other languages does.
 * Lookup - O(n)
 * Insert - O(n)
 * Delete - O(n)
+
+
+## Pointer
+
+````
+const obj1 = {a: true}
+const obj2 = obj1;
+
+````
+
+we created a pointer to reference another object in memory.
