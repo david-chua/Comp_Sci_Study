@@ -81,3 +81,5 @@ Flexible keys
 ### Cons:
 Unordered
 Slow key iteration --> Have to go through entire object
+
+In terms of collisions, we want to look into Linked List which would create a chain instead of an array of objects. 
