@@ -25,3 +25,17 @@ apples
 JavaScript has no linked list. Other languages does.
 
 ## Why Linked List:
+
+* It's easy to insert and delete
+* Linked List traversal
+* One con:  Array has sequential memory (Linked List are scattered all over memory).
+* There is some sort of order in a Linked List compared to a Hash Table.
+
+
+## Time Complexity:
+
+* Prepend - O(1)
+* Append - O(1)
+* Lookup - O(n)
+* Insert - O(n)
+* Delete - O(n)
