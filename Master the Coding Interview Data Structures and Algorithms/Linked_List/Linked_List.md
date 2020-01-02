@@ -61,16 +61,17 @@ we created a pointer to reference another object in memory.
 * Delete - O(n)
 
 ## When to use Singly Linked List vs Doubly Linked List?
-Singly Linked List -
+Singly Linked List 
 
 * More simple
 * Less memory taken
 * Fast insertion and deletion
 * Not a lot of searching
 
-Doubly Linked List -
+Doubly Linked List
+
 * Can traverse front to back
 * Complex to implement
 * Requires more memory
 * Extra operations to perform to update when inserting and removing
-* Searching is good because you can go both ways. 
+* Searching is good because you can go both ways.
