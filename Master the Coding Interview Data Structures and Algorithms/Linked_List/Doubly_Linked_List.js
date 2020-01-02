@@ -1,103 +1,88 @@
-// 10 --> 5 --> 16
-
-/* example structure
-let myLinkedList = {
-  head: {
-    value: 10,
-    next: {
-      value: 5,
-      next: {
-        value: 16,
-        next: null
-      }
-    }
-  }
-}
-
-*/
-
 class Node{
   constructor(value){
     this.value = value;
     this.next = null;
+    this.prev = null;
   }
 }
 
-class LinkedList {
+class DoublyLinkedList{
   constructor(value){
     this.head = {
       value: value,
-      next: null
-    }
+      next: null,
+      prev: null
+    };
     this.tail = this.head;
-    this.length = 1
+    this.length = 1;
   }
 
   append(value){
-    const newNode = new Node(value);
+    const newNode = new Node(value)
+    newNode.prev = this.tail;
     this.tail.next = newNode;
     this.tail = newNode;
     this.length++;
-    return this;
+    return this
   }
-
   prepend(value){
-    const newNode = new Node(value);
+    const newNode = new Node(value)
     newNode.next = this.head;
+    this.head.prev = newNode;
     this.head = newNode;
     this.length++;
     return this;
   }
-
   printList(){
     const array = [];
     let currentNode = this.head;
-    while (currentNode !== null){
+    while(currentNode !== null){
       array.push(currentNode.value)
       currentNode = currentNode.next;
     }
-    console.log(array)
+    console.log(array);
     return array;
   }
 
+  insert(index, value){
+    if (index >= this.length){
+      return this.append(value);
+    }
+    const newNode = new Node(value)
+    const leader = this.traverseToIndex(index -1);
+    const follower = leader.next;
+    leader.next = newNode;
+    newNode.prev = leader;
+    newNode.next = follower;
+    follower.prev = newNode;
+    this.length++
+    return this.printList()
+  }
+
   traverseToIndex(index){
-    // check param
     let counter = 0;
     let currentNode = this.head;
     while (counter !== index){
       currentNode = currentNode.next;
-      counter++;
+      counter++
     }
     return currentNode;
   }
-  insert(index, value){
-    // check params
-    if (index >= this.length){
-      // You can also choose to make this an error, otherwise add to end of linkedlist
-      return this.append(value);
-    }
-    const newNode = new Node(value);
-    const leader = this.traverseToIndex(index-1);
-    const holdingPointer = leader.next;
-    leader.next = newNode;
-    newNode.next = holdingPointer;
-    this.length++;
-    this.printList();
-  }
 
-  remove(index, value){
+  remove(index,value){
     if (index >= this.length || index < 0){
-      return "index does not exist"
+      return "Index does not exist"
     }
     const leader = this.traverseToIndex(index-1)
     const unwantedNode = leader.next;
+    unwantedNode.next.previous = leader;
     leader.next = unwantedNode.next;
     this.length--;
     return this.printList();
   }
 }
 
-const myLinkedList = new LinkedList(10)
+const myLinkedList = new DoublyLinkedList(10);
 myLinkedList.append(5);
 myLinkedList.append(16);
 myLinkedList.prepend(1);
@@ -106,3 +91,4 @@ myLinkedList.insert(20,88);
 myLinkedList.printList();
 myLinkedList.remove(2);
 myLinkedList.printList();
+myLinkedList.remove(3);

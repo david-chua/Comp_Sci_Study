@@ -50,3 +50,27 @@ const obj2 = obj1;
 ````
 
 we created a pointer to reference another object in memory.
+
+
+## Doubly Linked List
+
+* Prepend - O(1)
+* Append - O(1)
+* Lookup - O(n)
+* Insert - O(n)
+* Delete - O(n)
+
+## When to use Singly Linked List vs Doubly Linked List?
+Singly Linked List -
+
+* More simple
+* Less memory taken
+* Fast insertion and deletion
+* Not a lot of searching
+
+Doubly Linked List -
+* Can traverse front to back
+* Complex to implement
+* Requires more memory
+* Extra operations to perform to update when inserting and removing
+* Searching is good because you can go both ways. 
