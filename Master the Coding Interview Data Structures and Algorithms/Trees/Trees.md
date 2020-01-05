@@ -38,3 +38,17 @@ log nodes = steps
 log 100 = 2
 10^2 = 100
 ````
+
+Based on the height, the maximum number of decisions are log height.
+
+Time Complexity:
+
+* Lookup - O(logN)
+* Insert - O(logN)
+* Delete - O(logN)
+
+You need to only explore a subset before finding an item.
+
+O(log n) is a really good time complexity.
+
+## Binary Search Tree - Really efficient tree.
