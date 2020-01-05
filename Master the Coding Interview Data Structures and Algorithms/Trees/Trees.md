@@ -52,3 +52,39 @@ You need to only explore a subset before finding an item.
 O(log n) is a really good time complexity.
 
 ## Binary Search Tree - Really efficient tree.
+
+Binary search tree is great for comparing trees.
+
+The data structures preserves relationships. Contains a parent and children relationship.
+
+Binary Search Trees
+
+Rules:
+
+* Left nodes of parent is smaller than parent node.
+* Right nodes of parent is larger than parent node.
+* Parent can only have 2 children
+
+Balanced vs Unbalanced BST:
+
+Unbalanced Binary Search tree - can look more like a linked list if everything gets added in one direction.
+
+Unbalanced Time Complexity
+
+* Lookup - O(n)
+* Insert - O(n)
+* Delete - O(n)
+
+## Binary Search Tree - Pros and Cons
+
+Pros:
+
+* Better than O(n) - if balanced
+* Ordered
+* Flexible Size
+
+Cons:
+
+No O(1) operations
+
+On average, objects and arrays acts faster than binary search trees but there are used cases where binary search trees can be faster, especially if it's a balanced Binary search tree. 
