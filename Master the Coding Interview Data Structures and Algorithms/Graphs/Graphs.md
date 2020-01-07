@@ -19,3 +19,37 @@ Graphs encompass Trees and Linked List.
 
 * Cyclic - Going from starting node to somewhere else and back to starting. (Like a circle)
 * Acycling - Not a full circle.
+
+
+## Graphs Data
+Graphs are built on top of other data structures.
+
+// Edge list
+
+````
+const graph = [[0,2], [2,3], [2,1], [1,3]];
+````
+
+// Adjacent List
+````
+const graph = [[2], [2,3], [0,1,3], [1,2]];
+````
+
+// Adjacent Matrix
+````
+const graph = [
+  [0,0,1,0],
+  [0,0,1,1],
+  [1,1,0,1],
+  [0,1,1,0]
+]
+
+or
+
+const graph = {
+  0: [0,0,1,0],
+  1: [0,0,1,1],
+  2: [1,1,0,1],
+  3: [0,1,1,0]
+}
+````
