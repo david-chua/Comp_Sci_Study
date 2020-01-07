@@ -53,3 +53,13 @@ const graph = {
   3: [0,1,1,0]
 }
 ````
+
+Graphs
+
+Pros:
+
+* Relationshps
+
+Cons:
+
+* Scaling is hard 
