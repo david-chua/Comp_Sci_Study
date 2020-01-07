@@ -87,4 +87,68 @@ Cons:
 
 No O(1) operations
 
-On average, objects and arrays acts faster than binary search trees but there are used cases where binary search trees can be faster, especially if it's a balanced Binary search tree. 
+On average, objects and arrays acts faster than binary search trees but there are used cases where binary search trees can be faster, especially if it's a balanced Binary search tree.
+
+## AVL Trees and Red Black Trees
+
+- Use this trees to have a balance tree.
+
+
+## Binary Heaps
+
+There's only going to be two children in Binary Heaps.
+A Binary tree - Every child belongs to a parent.
+
+Max Heap - goes from greater to lease.
+
+Binary Heap Complexity:
+
+* Lookup - O(n)
+* Insert - O(log N)
+* delete - O(log N)
+
+Binary Heaps have an index.
+
+Why use Binary Heaps:
+
+- Great for comparative operations
+
+Binary Heaps bubbles up or down depending on the type of heap - Max vs Min.
+
+## Quick Notes of Heaps
+
+Memory Heap != Heap Data Structure
+
+Binary Heaps has no order from left to right.
+
+They take up the least amount of memory. They do left to right insertion.
+
+You can implement binary heaps using arrays.
+
+Priority Queue - type of data that has a priority.
+- Think of it as a club. VIP has a priority over regular.
+- You can also think of it as a hospital, where people with more severe injuries are treated faster.
+
+Binary Heaps
+
+Pros:
+
+* Better than O(n)
+* Priority
+* Flexible Size
+* Fast Inserts
+
+Cons:
+
+* Slow lookup
+
+## Trie
+
+Specialized tree used for searching.
+
+Allows you to know if a word or part of a word is part of a text.
+
+It's a tree like data structures that is good for searching words.
+
+Big O - O(length of word)
+Space complexity: Because we use prefixes, we don't store it multiple times. Because of prefixes, you don't store multiple of hte same letters.
