@@ -26,3 +26,12 @@ function inception(){
 Recursion is really good when there's a repeated subtask
 
 You can use it to traverse a tree.
+
+## Stack Overflow
+
+Difficult to understand at first.
+
+Stack overflow - A function calls itself longer than the stack size. function calls stacking on top of each other without anything being removed in the stack until memory limit is reached or a program limit is reached. This can cause programs to crash due to running out of memory.
+
+
+## Anatomy of Recursion
