@@ -35,3 +35,20 @@ Stack overflow - A function calls itself longer than the stack size. function ca
 
 
 ## Anatomy of Recursion
+
+Each recursion should have a base case - what stops the recursion function.
+The other path is the recursive case - which calls the function again.
+
+To add a base case in the function, we have to provide a condition that stops the recursion.
+
+````
+let counter = 0;
+
+function inception(){
+  if (counter > 3){
+    return 'done';
+  }
+  counter++;
+  return inception();
+}
+````
