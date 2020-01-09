@@ -33,3 +33,7 @@ basket.sort(function(a,b) {
 });
 ````
 ## Sorting Algorithms
+
+There are a lot of coding algorithms.
+
+Helps to understand the tradeoffs between each different sorting algorithms.
