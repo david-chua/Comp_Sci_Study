@@ -22,17 +22,32 @@ const numbers = [9, 44, 6, 2, 1,5,63,87, 283, 4,0];
 
 
 
-const insertionSort = arr => {
-  const len = arr.length;
-  for (let i = 0; i < len; i++) {
-    let el = arr[i];
-    let j;
-    for (j = i - 1; j >= 0 && arr[j] > el; j--) {
-      arr[j + 1] = arr[j];
+// const insertionSort = arr => {
+//   const len = arr.length;
+//   for (let i = 0; i < len; i++) {
+//     let el = arr[i];
+//     let j;
+//     for (j = i - 1; j >= 0 && arr[j] > el; j--) {
+//       arr[j + 1] = arr[j];
+//     }
+//     arr[j + 1] = el;
+//   }
+//   return arr;
+// };
+
+function insertionSort(array){
+  const length = array.length;
+  for (let i = 0; i < length; i++){
+    let el = array[i];
+    let j = i -1;
+    while (j >=0 && array[j] > el){
+      array[j+1] = array[j];
+      j--;
     }
-    arr[j + 1] = el;
+    array[j+1] = el;
   }
-  return arr;
-};
+  return array;
+}
+
 insertionSort(numbers);
 console.log(numbers);
