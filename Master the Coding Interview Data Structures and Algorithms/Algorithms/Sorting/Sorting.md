@@ -37,3 +37,11 @@ basket.sort(function(a,b) {
 There are a lot of coding algorithms.
 
 Helps to understand the tradeoffs between each different sorting algorithms.
+
+## Which sorting is the best.
+
+- Insertion sort should be used in small items. It uses little space and very easy to implement.
+- Bubble sort - not really going to use. Not very efficient.
+- Selection sort - not really going to use. Not efficient.
+- Merge sort - really good because of divide and conquer. It's fast and use O(n) space complexity.
+- Radix/Counting/Bucket sort.
