@@ -140,6 +140,21 @@ class BinarySearchTree{
     }
     return list;
   }
+
+  breadthFirstSearchR(queue, list){
+    if (queue.length){
+      return list;
+    }
+    let currentNode = queue.shift();
+    list.push(currentNode.value);
+    if (currentNode.left){
+      queue.push(currentNode.left);
+    }
+    if (currentNode.right){
+      queue.push(currentNode.right);
+    }
+    return this.breadthFirstSearchR(queue, list);
+  }
 }
 
 const tree = new BinarySearchTree();
@@ -158,3 +173,6 @@ function traverse(node){
   tree.right = node.right === null? null:  traverse(node.right);
   return tree;
 }
+
+
+breadthFirstSearchR([tree.root], [])
