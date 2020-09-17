@@ -32,3 +32,18 @@ Client-Server model
 Client sends data to a server or requests data from a server. The Server then returns data for the server.
 
 ![Client - Server model](https://github.com/david-chua/Comp_Sci_Study/blob/master/System_Design/Images/Client-Server-Model.png)
+
+Example:
+- Client - Browser
+- Server - AlgoExpert
+
+The Client doesn't know what the server is. All it knows is that it can communicate with the Server. It'll request info from the server. Based on the response of the server, it'll be able to do stuff.
+
+When you put Algoexpert in your browser, it does a DNS query to find out what the IP address of AlgoExpert is and only then can it really speak to AlgoExpert.
+
+DNS query is special request that goes to a predetermined set of server and asks for the IP address of the server.
+
+You can think of IP address as mailbox.
+Google cloud platform hosts AlgoExpert. Google cloud platform shows the IP address of the site. The google server hosting AlgoExpert has a specific IP address.
+
+Once the DNS sends the IP address back, the Client knows where AlgoExpert is. Then the Client sends an HTTP requests ( a way to send info that the server can understand). The request also contains the address of the client. In this way, the server knows where to send return data (source address).
