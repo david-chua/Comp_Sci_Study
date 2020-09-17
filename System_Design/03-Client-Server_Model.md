@@ -47,3 +47,4 @@ You can think of IP address as mailbox.
 Google cloud platform hosts AlgoExpert. Google cloud platform shows the IP address of the site. The google server hosting AlgoExpert has a specific IP address.
 
 Once the DNS sends the IP address back, the Client knows where AlgoExpert is. Then the Client sends an HTTP requests ( a way to send info that the server can understand). The request also contains the address of the client. In this way, the server knows where to send return data (source address).
+After getting the request from the Client, the server then sends specific data based on the request and sends it back to the client where the browser can see the results. 
