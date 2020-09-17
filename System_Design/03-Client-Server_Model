@@ -28,3 +28,6 @@ Client-Server model
 
 - Foundation of modern internet
 - Foundation of how computers speak with one another
+
+Client sends data to a server or requests data from a server. The Server then returns data for the server.
+![Client - Server model](https://github.com/david-chua/Comp_Sci_Study/blob/master/System_Design/Images/Client-Server-Model.png =400x)
