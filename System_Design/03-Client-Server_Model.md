@@ -31,4 +31,4 @@ Client-Server model
 
 Client sends data to a server or requests data from a server. The Server then returns data for the server.
 
-![Client - Server model](https://github.com/david-chua/Comp_Sci_Study/blob/master/System_Design/Images/Client-Server-Model.png =400x)
+![Client - Server model](https://github.com/david-chua/Comp_Sci_Study/blob/master/System_Design/Images/Client-Server-Model.png)
