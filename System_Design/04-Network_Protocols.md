@@ -26,6 +26,9 @@ headers: pair list (example: "Content-Length" => 1238)
 body: opaque sequence of bytes
 ```
 
-4. <strong>IP Packet</strong> - Sometimes more broadly referred to as just a (network) packet. An IP packet is effectively the smallest unit used to describe data being sent over <strong>IP</strong>, aside from bytes. An IP packets consists of:
+4. <strong>IP Packet</strong> - Sometimes more broadly referred to as just a (network) packet. An IP packet is effectively the smallest unit used to describe data being sent over <strong>IP</strong>, aside from bytes.
+
+An IP packets consists of:
+
 - an IP Header, which contains the source and destination IP addresses as well as other info related to the Network
 - a payload, which is just the data being sent over the network.
