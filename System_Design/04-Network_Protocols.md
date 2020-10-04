@@ -32,3 +32,15 @@ An IP packets consists of:
 
 - an IP Header, which contains the source and destination IP addresses as well as other info related to the Network
 - a payload, which is just the data being sent over the network.
+
+## What is a protocol?
+- An agreed upon set of rules regarding interaction between two parties.
+  - eg: two people who vaguely know each other run into one another and have an interaction (small talk). This differs depending on culture and how much you know the other person.
+
+### Modern internet runs on following internet protocol.
+- When a machine tries to interact to another machine and sends data, the data is sent in the form of an IP packet (fundamental unit of data that's sent from one machine to another).
+- IP packets are building blocks of communication between machine over internet.
+- There are other units beyond IP packets. It's also made up of bytes.
+- IP packet has two main sections
+  - IP header - contains where machine is coming from and where it's being sent to. Also contains version of internet protocol and size of packet.
+  - Data -
