@@ -26,3 +26,18 @@ let myHouse = new Building(3)
 Building.prototype.countFloors = function(){
   console.log("I have ", this.floors, ' floors');
 };
+
+
+function Yurt = function(ribs){
+  this.ribs = ribs;
+}
+
+Yurt.prototype.countRibs = function(){
+  if(this.ribs> 10){
+    console.log("YUM!!");
+  }
+};
+
+var biancasHouse = new Yurt(50);
+
+biancasHouse.countRibs() // "YUM!!"
