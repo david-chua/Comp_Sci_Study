@@ -89,8 +89,7 @@ i != j --> inequality test, True if i is not the same as j
 ## Logic Operators on bools
 
 not a --> True if a is False
-
-          False if a is True
+not a --> False if a is True
 
 a and b --> True if both are True
 
