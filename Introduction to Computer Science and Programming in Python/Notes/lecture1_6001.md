@@ -22,6 +22,7 @@ How do you represents problems with data structures
 ### Strings
 ################################
 
+````
 hi = "hello there"
 
 name = "ana"
@@ -38,12 +39,16 @@ silly = hi + (" " + name)*3
 
 print(silly)  --> hello there ana ana ana
 
+````
+
 ################################
 ### Input / Output
 ################################
 
 using commas(,), Python automatically inserts space
 using plus(+), Python does not add space.
+
+````
 
 x = 1
 
@@ -56,6 +61,8 @@ print("my fav number is", x, ".", "x=", x) --> my fav number is 1 . x= 1
 print("my fav number is", x_str + "." + "x=" + x_str) --> my fav number is 1.x=1
 
 print("my fav number is" + x_str + "." + "x=" + x_str) --> my fav number is1.x=1
+
+````
 
 INPUT/OUTPUT: input("")
 - prints whatever is in the quotes
@@ -101,3 +108,31 @@ a or b --> True if either or both are True
 | True | False | False | True |
 | False | True | False | True |
 | False | False | False | False |
+
+
+## Control Flow -- Branching
+
+Conditions --> decides if code goes into the code block or not.
+
+      if, else, elif evaluates expression in that block if<condition> is True
+
+Using if, else construct determines that code goes one pathway or another.
+
+## Indentation
+
+- matters in Python
+- how you denote blocks of code
+
+````
+x = float(input("enter a number for x: "))
+y = float(input("Enter a number for y: "))
+if x == y:
+    print("x and y are equal")
+    if y != 0:
+        print("therefore, x/y is ", x/y)
+elif x < y:
+    print("x is smaller")
+else:
+    print("y is smaller")
+print("thanks")
+````
