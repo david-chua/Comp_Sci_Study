@@ -129,6 +129,6 @@ print("thanks")
 
 ## Loops:
 
-![Nested If]("https://github.com/david-chua/Comp_Sci_Study/blob/master/Introduction%20to%20Computer%20Science%20and%20Programming%20in%20Python/Images/Lecture1/Nested_If.png"")
+![Nested If](https://github.com/david-chua/Comp_Sci_Study/blob/master/Introduction%20to%20Computer%20Science%20and%20Programming%20in%20Python/Images/Lecture1/Nested_If.png "Nested if")
 
-![While]("https://github.com/david-chua/Comp_Sci_Study/blob/master/Introduction%20to%20Computer%20Science%20and%20Programming%20in%20Python/Images/Lecture1/While.png")
+![While](https://github.com/david-chua/Comp_Sci_Study/blob/master/Introduction%20to%20Computer%20Science%20and%20Programming%20in%20Python/Images/Lecture1/While.png "While loops")
