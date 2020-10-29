@@ -132,3 +132,88 @@ print("thanks")
 ![Nested If](https://github.com/david-chua/Comp_Sci_Study/blob/master/Introduction%20to%20Computer%20Science%20and%20Programming%20in%20Python/Images/Lecture1/Nested_If.png "Nested if")
 
 ![While](https://github.com/david-chua/Comp_Sci_Study/blob/master/Introduction%20to%20Computer%20Science%20and%20Programming%20in%20Python/Images/Lecture1/While.png "While loops")
+
+## Control Flow
+
+while LOOP example
+
+You are in the Lost forest.
+
+Go left or right?
+
+Program:
+
+````
+n = input("You're in the Lost Forest. Go left or right? ")
+while n == "right":
+    n = input("You're in the Lost Forest. go left or right? ")
+print("You got out of the Lost Forest")
+
+````
+
+## While and for loops
+- make sure that you have an increment if you have a loop counter
+
+````
+n = 0
+
+while (n < 5):
+    print(n)
+    n = n + 1
+````
+- From example above, having infinite loop will never exit the loops
+
+````
+for n in range(5):
+    print(n)
+````
+
+- this is the same example as the code above
+
+## Control Flow: for LOOPS
+
+````
+for <variable> in range(<some_num>):
+    <expression>
+    <expression>
+    ..
+
+````
+
+- each time through the loop, <variable> takes a evaluate
+- first time, <variable> starts at the smallest value
+- next time, <variable> gets the prev value + 1
+
+range(start, stop, step)
+- default values are start = 0 and step = 1 and optional
+- loop until value is stop -1
+
+````
+mysum = 0
+for i in range(7, 10):
+    mysum +=i
+print(mysum)
+
+
+mysum = 0
+for i in range(5, 11, 2):
+    mysum +=i
+print(mysum)
+````
+
+## break statements
+- immediately exists whatever loop it is in
+- skips remaining expressions in code blocks
+- exists only innermost loops
+
+User for loops when
+- know number of Iteration
+- can end early via break
+- uses a counter
+- can rewrite a for loop using a while loop
+
+User while loops when
+- unbounded number of iterations
+- can end early via break
+- can use a counter but must initialize before loop and increment inside loops
+- may not be able to rewrite a while loop usin ga for loop
