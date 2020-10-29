@@ -24,21 +24,13 @@ How do you represents problems with data structures
 
 ````
 hi = "hello there"
-
 name = "ana"
-
 greet = hi + name
-
 print(greet) --> hello thereana
-
 greeting = hi + " " + name
-
 print(greeting) --> hello there ana
-
 silly = hi + (" " + name)*3
-
 print(silly)  --> hello there ana ana ana
-
 ````
 
 ################################
@@ -49,32 +41,30 @@ using commas(,), Python automatically inserts space
 using plus(+), Python does not add space.
 
 ````
-
 x = 1
-
 print(x) --> 1
-
 x_str = str(x)
-
 print("my fav number is", x, ".", "x=", x) --> my fav number is 1 . x= 1
-
 print("my fav number is", x_str + "." + "x=" + x_str) --> my fav number is 1.x=1
-
 print("my fav number is" + x_str + "." + "x=" + x_str) --> my fav number is1.x=1
-
 ````
 
 INPUT/OUTPUT: input("")
 - prints whatever is in the quotes
 - user types in something and hits Enter
 - binds that value to a variable
+````
 eg: text = input("Type anything...")
 print(5*text)
 
+````
+
 - input gives you a string so must case if working with numbers
+````
 eg: num = int(input("Type a number... "))
 print(5*num)
 
+````
 
 ## Comparison Operators on int, float, String
 - i and j are variables names
